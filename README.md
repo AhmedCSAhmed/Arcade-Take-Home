@@ -119,7 +119,4 @@ app.run(host='0.0.0.0', port=8000, debug=True)
 
 - **SQLite over complex databases**: Built-in, zero-config, perfect for requirements
 - **File-based storage**: Real persistence requirement - data survives server restarts
-- **Sync over async**: Prioritized working software over optimization given time constraints
 - **Custom exceptions**: Single `KVStoreError` class provides consistent error reporting
-
-**Philosophy**: Chose simplicity and functionality over complex optimizations.
