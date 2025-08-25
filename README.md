@@ -105,9 +105,8 @@ app.run(host='0.0.0.0', port=8000, debug=True)
 
 ### Database Schema
 
-- **Keys as TEXT**: Chose performance over flexibility - string keys cover 99% of use cases
-- **Values as BLOB**: Used pickle serialization to meet "store anything" requirement
-- **No transaction_id column**: SQLite handles transactions natively - avoid reinventing the wheel
+- **Keys as TEXT**: I chose performance over flexibility - string keys cover 99% of use cases
+- **Values as BLOB**: I used pickle serialization to meet "store anything" requirement
 
 ### Architecture Choices
 
@@ -117,6 +116,5 @@ app.run(host='0.0.0.0', port=8000, debug=True)
 
 ### Technology Decisions
 
-- **SQLite over complex databases**: Built-in, zero-config, perfect for requirements
-- **File-based storage**: Real persistence requirement - data survives server restarts
+- **File-based storage**: Real persistence requirement is met in this case - data survives server restarts
 - **Custom exceptions**: Single `KVStoreError` class provides consistent error reporting
